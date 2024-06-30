@@ -14,6 +14,11 @@ Route::get('/hello/{name}', [HelloWorldController::class, 'hello']);
 Route::get('/bands', [BandController::class, 'getAll']);
 Route::get('/mpdf', [ConversorPdfController::class, 'ConversorPdf']);
 Route::get('/bancos', [BancosController::class, 'exibirDadosDaConta']);
+Route::get('/bancos/saldo', [BancosController::class, 'obterSaldo']);
+Route::get('/bancos/saque/{valor}', [BancosController::class, 'sacar']);
+Route::get('/bancos/deposito/{valor}', [BancosController::class, 'depositar']);
+Route::get('/bancos/corrente', [BancosController::class, 'operacionalizarCC']);
+Route::get('/bancos/poupanca', [BancosController::class, 'operacionalizarCP']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
