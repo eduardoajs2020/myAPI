@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Date;
+
 
 class BancosController extends BaseController
 {
